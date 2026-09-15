@@ -10,14 +10,16 @@
 <style>
 :root{
 --navy:#071d32;
---navy2:#0d2d49;
---gold:#c99a4a;
---cream:#f6eddd;
+--navy2:#102a43;
+--gold:#d6ad5b;
+--gold-light:#f0d28a;
+--cream:#f5ecdc;
 --paper:#fffaf1;
---white:#fff;
---muted:#667085;
+--white:#ffffff;
+--muted:#6b7280;
 --green:#25d366;
---line:#e5d8c3;
+--line:#d8bd7a;
+--dark:#071725;
 }
 
 *{
@@ -31,8 +33,11 @@ scroll-behavior:smooth;
 }
 
 body{
+body{
 font-family:Tahoma,Arial,sans-serif;
-background:var(--cream);
+background:
+radial-gradient(circle at 50% 20%,rgba(214,173,91,.12),transparent 35%),
+var(--cream);
 color:var(--navy);
 line-height:1.8;
 }
