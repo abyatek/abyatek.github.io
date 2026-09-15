@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#2f6dcc">
+<meta name="theme-color" content="#071d32">
 <meta name="description" content="أبياتك — قصائد خاصة، أبيات للمناسبات وتجهيز الشيلات بأسلوب يليق بك.">
 <title>أبياتك | أبيات وقصائد وشيلات</title>
 
 <style>
 :root{
---blue:#2f6dcc;
---blue-dark:#1f56ad;
---dark:#111b2e;
---gold:#c49a4a;
---bg:#f5f8fd;
---muted:#667085;
---line:#e5eaf2;
+--navy:#071d32;
+--navy2:#0d2d49;
+--gold:#c99a4a;
+--cream:#f6eddd;
+--paper:#fffaf1;
 --white:#fff;
+--muted:#667085;
 --green:#25d366;
+--line:#e5d8c3;
 }
 
 *{
@@ -32,9 +32,9 @@ scroll-behavior:smooth;
 
 body{
 font-family:Tahoma,Arial,sans-serif;
-background:var(--bg);
-color:var(--dark);
-line-height:1.85;
+background:var(--cream);
+color:var(--navy);
+line-height:1.8;
 }
 
 a{
@@ -42,144 +42,123 @@ text-decoration:none;
 color:inherit;
 }
 
-button{
-font:inherit;
-}
-
 .container{
-width:min(1120px,92%);
+width:min(1180px,92%);
 margin:auto;
 }
 
 /* HEADER */
-
 header{
 position:sticky;
 top:0;
-z-index:1000;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(16px);
-border-bottom:1px solid var(--line);
+z-index:100;
+background:rgba(7,29,50,.97);
+border-bottom:1px solid rgba(201,154,74,.4);
 }
 
 .nav{
-height:72px;
+height:74px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:20px;
 }
 
 .logo{
 display:flex;
 align-items:center;
 gap:10px;
-color:var(--blue);
+color:#f5d28e;
 font-size:28px;
 font-weight:900;
 }
 
 .logo-mark{
-width:44px;
-height:44px;
-border-radius:14px;
-background:linear-gradient(145deg,#3979d8,#245eb8);
-color:white;
+width:45px;
+height:45px;
+border:1px solid var(--gold);
+border-radius:50%;
 display:grid;
 place-items:center;
-font-size:26px;
-box-shadow:0 8px 22px rgba(47,109,204,.24);
+background:rgba(201,154,74,.1);
 }
 
 .menu{
 display:flex;
 align-items:center;
-gap:25px;
-}
-
-.menu a{
-font-weight:700;
-color:#344054;
-transition:.2s;
+gap:26px;
+color:#fff;
+font-size:15px;
+font-weight:bold;
 }
 
 .menu a:hover{
-color:var(--blue);
+color:#e7bd72;
 }
 
 .nav-cta{
-background:var(--blue);
-color:white!important;
-padding:9px 16px;
-border-radius:12px;
+background:linear-gradient(135deg,#e5b96e,#b77f2c);
+color:#111!important;
+padding:8px 18px;
+border-radius:25px;
 }
 
 /* HERO */
-
 .hero{
+min-height:650px;
+display:flex;
+align-items:center;
 position:relative;
 overflow:hidden;
-padding:82px 0 76px;
+
 background:
-radial-gradient(circle at 50% 0,#fff 0,#edf4ff 48%,#f5f8fd 100%);
+radial-gradient(circle at 75% 20%,rgba(255,220,160,.9),transparent 27%),
+linear-gradient(90deg,
+rgba(7,29,50,.98),
+rgba(7,29,50,.78) 38%,
+rgba(246,237,221,.35)),
+linear-gradient(135deg,#302117,#b98b4d,#f4e7cf);
 }
 
 .hero-inner{
-text-align:center;
 position:relative;
 z-index:1;
-}
-
-.hero-badge{
-display:inline-flex;
-align-items:center;
-gap:7px;
-background:white;
-border:1px solid #dce7f7;
-color:var(--blue);
-padding:8px 15px;
-border-radius:999px;
-font-weight:800;
-box-shadow:0 8px 24px rgba(20,40,80,.06);
-margin-bottom:22px;
-}
-
-.hero-icon{
-width:116px;
-height:116px;
-border-radius:34px;
-margin:0 auto 20px;
-background:linear-gradient(145deg,#3979d8,#245eb8);
-color:white;
 display:grid;
-place-items:center;
-font-size:68px;
+grid-template-columns:1.05fr .95fr;
+align-items:center;
+gap:35px;
+padding:70px 0;
+}
+
+.hero-copy{
+color:#fff;
+}
+
+.eyebrow{
+color:var(--gold);
 font-weight:900;
-box-shadow:0 24px 50px rgba(47,109,204,.24);
 }
 
 .hero h1{
-font-size:64px;
-color:var(--blue);
-font-weight:900;
-line-height:1.15;
+font-size:80px;
+line-height:1;
+color:#09243d;
+margin:8px 0;
 }
 
 .hero h2{
 font-size:29px;
-margin:8px 0 14px;
+color:#654820;
+margin-bottom:15px;
 }
 
 .hero p{
-max-width:720px;
-margin:0 auto 28px;
-color:var(--muted);
-font-size:19px;
+font-size:20px;
+max-width:700px;
+margin-bottom:25px;
 }
 
-.buttons{
+.hero-actions{
 display:flex;
-justify-content:center;
 gap:12px;
 flex-wrap:wrap;
 }
@@ -189,11 +168,10 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 gap:8px;
-padding:14px 24px;
-border-radius:15px;
+padding:13px 24px;
+border-radius:14px;
 font-weight:900;
 transition:.2s;
-border:1px solid transparent;
 }
 
 .btn:hover{
@@ -202,200 +180,237 @@ transform:translateY(-2px);
 
 .whatsapp{
 background:var(--green);
-color:white;
-box-shadow:0 10px 24px rgba(37,211,102,.2);
+color:#fff;
 }
 
-.primary{
-background:var(--blue);
-color:white;
-box-shadow:0 10px 24px rgba(47,109,204,.18);
+.gold{
+background:linear-gradient(135deg,#f0c878,#b47c2d);
+color:#111;
 }
 
-.secondary{
-background:white;
-color:var(--blue);
-border-color:#d6e2f4;
+.outline{
+background:#fff;
+color:var(--navy);
 }
 
-/* SECTIONS */
+.hero-brand{
+text-align:center;
+background:rgba(255,248,235,.88);
+padding:35px 25px;
+border-radius:40px;
+border:1px solid rgba(201,154,74,.7);
+box-shadow:0 25px 70px rgba(0,0,0,.22);
+}
 
-section{
-padding:76px 0;
+.brand-symbol{
+width:120px;
+height:120px;
+margin:auto;
+border-radius:32px;
+background:var(--navy);
+color:#e2b967;
+display:grid;
+place-items:center;
+font-size:65px;
+border:2px solid var(--gold);
+}
+
+.hero-brand h3{
+font-size:21px;
+color:#6d4c22;
+margin-top:13px;
+}
+
+.quote{
+font-family:Georgia,serif;
+font-size:19px;
+color:#5f4728;
+margin-top:20px;
+}
+
+/* SERVICES */
+.services-section{
+background:var(--paper);
+padding:70px 0;
 }
 
 .section-head{
 text-align:center;
-margin-bottom:40px;
-}
-
-.section-head .eyebrow{
-color:var(--gold);
-font-weight:900;
-font-size:14px;
+margin-bottom:38px;
 }
 
 .section-head h2{
-font-size:36px;
-margin:2px 0 5px;
+font-size:40px;
 }
 
 .section-head p{
 color:var(--muted);
+font-size:17px;
 }
-
-/* SERVICES */
 
 .services{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:16px;
 }
 
 .card{
-background:white;
+background:#fff;
 border:1px solid var(--line);
-border-radius:24px;
-padding:32px 25px;
+border-radius:22px;
+padding:26px 18px;
 text-align:center;
-box-shadow:0 10px 30px rgba(20,30,50,.05);
+box-shadow:0 8px 25px rgba(66,45,20,.06);
 transition:.25s;
 }
 
 .card:hover{
 transform:translateY(-5px);
-box-shadow:0 18px 38px rgba(20,30,50,.09);
 }
 
 .icon{
-width:66px;
-height:66px;
-border-radius:19px;
-background:#edf4ff;
-color:var(--blue);
+width:58px;
+height:58px;
+border-radius:18px;
+background:#f5ead6;
+color:#a8742b;
 display:grid;
 place-items:center;
-margin:0 auto 16px;
-font-size:30px;
+margin:auto auto 12px;
+font-size:27px;
 }
 
 .card h3{
-font-size:23px;
-margin-bottom:8px;
+font-size:20px;
+margin-bottom:4px;
 }
 
 .card p{
-color:var(--muted);
+color:#697386;
+font-size:14px;
 }
 
-.featured{
-margin-top:20px;
-background:linear-gradient(135deg,#172033,#293b5f);
-color:white;
-border-radius:26px;
-padding:28px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:25px;
+/* FEATURES */
+.features{
+background:var(--navy);
+color:#fff;
+padding:35px 0;
 }
 
-.featured h3{
-font-size:24px;
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
 }
 
-.featured p{
-color:#dce4ef;
-margin-top:4px;
+.feature{
+text-align:center;
+padding:10px 18px;
+border-left:1px solid rgba(201,154,74,.45);
+}
+
+.feature:last-child{
+border-left:0;
+}
+
+.feature b{
+display:block;
+color:#f1c879;
+font-size:27px;
+}
+
+.feature span{
+font-weight:bold;
 }
 
 /* ABOUT */
-
 .about{
-background:white;
+padding:75px 0;
+background:linear-gradient(#f6eddd,#fffaf1);
 }
 
 .about-grid{
 display:grid;
-grid-template-columns:1.05fr .95fr;
-gap:22px;
-align-items:stretch;
+grid-template-columns:1fr 1fr;
+gap:25px;
+align-items:center;
 }
 
-.about-box{
-background:linear-gradient(145deg,#172033,#253451);
-color:white;
+.about-card{
+background:var(--navy);
+color:#fff;
 border-radius:28px;
-padding:42px 34px;
-box-shadow:0 18px 40px rgba(23,32,51,.13);
+padding:42px;
 }
 
-.about-box h2{
+.about-card h2{
 font-size:34px;
+color:#f2ca7e;
 margin-bottom:12px;
 }
 
-.about-box p{
-color:#dce4ef;
-font-size:18px;
+.about-card p{
+color:#e4e9ef;
+font-size:17px;
 }
 
 .values{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:14px;
+gap:13px;
 }
 
 .value{
-background:var(--bg);
+background:#fff;
 border:1px solid var(--line);
-border-radius:20px;
-padding:25px;
+border-radius:18px;
+padding:22px;
 }
 
 .value strong{
 display:block;
-font-size:19px;
+font-size:18px;
 margin-bottom:5px;
 }
 
 .value span{
 color:var(--muted);
-font-size:15px;
+font-size:14px;
 }
 
 /* STEPS */
-
 .steps{
+padding:70px 0;
+background:var(--paper);
+}
+
+.step-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:18px;
 }
 
 .step{
-background:white;
+background:#fff;
 border:1px solid var(--line);
 border-radius:22px;
-padding:29px;
+padding:30px;
 text-align:center;
 }
 
-.step-number{
+.num{
 width:46px;
 height:46px;
 border-radius:50%;
-background:var(--blue);
-color:white;
+background:var(--gold);
+color:#111;
 display:grid;
 place-items:center;
-margin:0 auto 12px;
+margin:auto auto 12px;
 font-weight:900;
-font-size:18px;
 }
 
 .step h3{
-font-size:20px;
-margin-bottom:5px;
+font-size:21px;
 }
 
 .step p{
@@ -403,8 +418,11 @@ color:var(--muted);
 }
 
 /* OCCASIONS */
-
 .occasions{
+padding:55px 0;
+}
+
+.pills{
 display:flex;
 justify-content:center;
 gap:10px;
@@ -412,301 +430,164 @@ flex-wrap:wrap;
 }
 
 .pill{
-background:white;
-border:1px solid #dce5f2;
-border-radius:999px;
-padding:11px 18px;
-color:#344054;
-font-weight:800;
-box-shadow:0 5px 16px rgba(20,30,50,.03);
-}
-
-/* PRICING */
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.price{
-background:white;
+background:#fff;
 border:1px solid var(--line);
-border-radius:24px;
-padding:30px;
-text-align:center;
-position:relative;
-}
-
-.price.best{
-border:2px solid var(--blue);
-box-shadow:0 14px 35px rgba(47,109,204,.12);
-}
-
-.best-label{
-position:absolute;
-top:-13px;
-right:50%;
-transform:translateX(50%);
-background:var(--blue);
-color:white;
-padding:4px 13px;
+padding:10px 17px;
 border-radius:999px;
-font-size:13px;
-font-weight:900;
-}
-
-.price h3{
-font-size:23px;
-}
-
-.price .hint{
-color:var(--muted);
-font-size:15px;
-margin:5px 0 17px;
-}
-
-.price ul{
-list-style:none;
-text-align:right;
-margin-bottom:20px;
-}
-
-.price li{
-padding:6px 0;
-color:#475467;
-}
-
-.price li:before{
-content:"✓";
-color:var(--blue);
-font-weight:900;
-margin-left:7px;
-}
-
-/* FAQ */
-
-.faq{
-max-width:850px;
-margin:auto;
-}
-
-.faq-item{
-background:white;
-border:1px solid var(--line);
-border-radius:17px;
-margin-bottom:10px;
-overflow:hidden;
-}
-
-.faq-q{
-width:100%;
-background:none;
-border:0;
-padding:18px 20px;
-text-align:right;
-display:flex;
-justify-content:space-between;
-align-items:center;
-cursor:pointer;
-font-weight:900;
-color:var(--dark);
-}
-
-.faq-q span{
-font-size:22px;
-color:var(--blue);
-transition:.2s;
-}
-
-.faq-a{
-display:none;
-padding:0 20px 18px;
-color:var(--muted);
-}
-
-.faq-item.open .faq-a{
-display:block;
-}
-
-.faq-item.open .faq-q span{
-transform:rotate(45deg);
+font-weight:bold;
 }
 
 /* CONTACT */
-
 .contact{
-padding-top:20px;
+padding:55px 0;
 }
 
 .contact-box{
-background:linear-gradient(135deg,#edf4ff,#fff);
-border:1px solid #dce7f7;
+background:var(--navy);
 border-radius:30px;
-padding:48px 25px;
+padding:45px;
 text-align:center;
+color:#fff;
+border:1px solid var(--gold);
 }
 
 .contact-box h2{
-font-size:35px;
-margin-bottom:9px;
+font-size:34px;
+color:#f2ca7e;
 }
 
 .contact-box p{
-color:var(--muted);
-max-width:680px;
-margin:0 auto 13px;
+color:#d9e0e8;
+margin:8px auto 18px;
+max-width:700px;
 }
 
 .phone{
 display:block;
 direction:ltr;
-color:var(--blue);
+color:#f2ca7e;
 font-size:25px;
 font-weight:900;
-margin-bottom:22px;
+margin-bottom:18px;
 }
 
 /* FOOTER */
-
 footer{
-background:#111827;
-color:#cbd5e1;
+background:#061524;
+color:#d7dee7;
 text-align:center;
 padding:38px 15px;
+border-top:1px solid rgba(201,154,74,.45);
 }
 
 .footer-logo{
-color:white;
-font-size:28px;
+color:#f2ca7e;
+font-size:29px;
 font-weight:900;
 }
 
 .footer-links{
 display:flex;
 justify-content:center;
-gap:18px;
-margin:8px 0;
+gap:22px;
+margin:10px 0;
 }
-
-.footer-links a{
-color:#dbe5f3;
-}
-
-footer small{
-color:#8d98aa;
-}
-
-/* FLOATING WHATSAPP */
 
 .floating{
 position:fixed;
 left:20px;
 bottom:20px;
-width:62px;
-height:62px;
+width:60px;
+height:60px;
 border-radius:50%;
 background:var(--green);
-color:white;
+color:#fff;
 display:grid;
 place-items:center;
 font-size:27px;
-box-shadow:0 10px 28px rgba(0,0,0,.2);
-z-index:200;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+z-index:90;
 }
 
 /* MOBILE */
-
 @media(max-width:850px){
 
-.services,
-.steps,
-.pricing{
+.menu{
+display:none;
+}
+
+.hero{
+min-height:auto;
+}
+
+.hero-inner{
 grid-template-columns:1fr;
+padding:50px 0;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.services,
+.step-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.feature-grid{
+grid-template-columns:1fr 1fr;
 }
 
 .about-grid{
 grid-template-columns:1fr;
 }
 
-.featured{
-flex-direction:column;
-text-align:center;
 }
 
-}
-
-@media(max-width:700px){
-
-.nav{
-height:66px;
-}
-
-.menu{
-display:none;
-}
-
-.logo{
-font-size:24px;
-}
-
-.logo-mark{
-width:39px;
-height:39px;
-font-size:23px;
-}
-
-.hero{
-padding:52px 0 62px;
-}
-
-.hero-icon{
-width:94px;
-height:94px;
-border-radius:28px;
-font-size:55px;
-}
+@media(max-width:600px){
 
 .hero h1{
-font-size:48px;
+font-size:52px;
 }
 
 .hero h2{
-font-size:23px;
+font-size:24px;
 }
 
 .hero p{
 font-size:17px;
 }
 
-section{
-padding:58px 0;
+.hero-brand{
+padding:27px 18px;
 }
 
-.section-head h2{
-font-size:29px;
+.brand-symbol{
+width:95px;
+height:95px;
+font-size:54px;
 }
 
-.about-box{
-padding:34px 23px;
-}
-
-.about-box h2{
-font-size:29px;
-}
-
+.services,
+.step-grid,
 .values{
 grid-template-columns:1fr;
 }
 
-.btn{
-width:100%;
-max-width:330px;
+.section-head h2{
+font-size:31px;
 }
 
-.floating{
-left:15px;
-bottom:15px;
+.contact-box{
+padding:32px 18px;
+}
+
+.contact-box h2{
+font-size:28px;
+}
+
+.btn{
+width:100%;
 }
 
 }
@@ -719,16 +600,15 @@ bottom:15px;
 <div class="container nav">
 
 <a class="logo" href="#top">
-<span class="logo-mark">أ</span>
+<span class="logo-mark">✦</span>
 أبياتك
 </a>
 
 <nav class="menu">
-<a href="#services">الخدمات</a>
-<a href="#about">عن أبياتك</a>
-<a href="#steps">كيف نعمل؟</a>
-<a href="#packages">الباقات</a>
-<a href="#faq">الأسئلة</a>
+<a href="#services">خدماتنا</a>
+<a href="#about">من نحن</a>
+<a href="#steps">كيف نعمل</a>
+<a href="#contact">تواصل معنا</a>
 
 <a class="nav-cta"
 href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بالاستفسار%20عن%20خدمات%20أبياتك">
@@ -742,40 +622,54 @@ href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20ب�
 
 <main id="top">
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="container hero-inner">
 
-<div class="hero-badge">
-✦ الكلمة اللي بخاطرك… نصيغها لك
-</div>
+<div class="hero-copy">
 
-<div class="hero-icon">
-أ
+<div class="eyebrow">
+من فكرتك .. إلى أبياتك
 </div>
 
 <h1>أبياتك</h1>
 
-<h2>
-أبيات وقصائد وشيلات
-</h2>
+<h2>لأن لكل شعور أبياته</h2>
 
 <p>
-قصائد خاصة، أبيات للمناسبات، وتجهيز شيلات بأسلوب يليق بك وبمناسبتك — من فكرتك إلى كلمات جاهزة.
+نحوّل أفكارك ومناسباتك ومشاعرك إلى كلمات تبقى في الذاكرة —
+قصائد خاصة، أبيات للمناسبات وتجهيز شيلات بأسلوب يليق بك.
 </p>
 
-<div class="buttons">
+<div class="hero-actions">
 
 <a class="btn whatsapp"
 href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بطلب%20خدمة%20من%20أبياتك">
-💬 تواصل معنا عبر واتساب
+💬 اطلب الآن عبر واتساب
 </a>
 
-<a class="btn secondary" href="#services">
+<a class="btn outline" href="#services">
 استعرض خدماتنا ↓
 </a>
+
+</div>
+
+</div>
+
+
+<div class="hero-brand">
+
+<div class="brand-symbol">
+أ
+</div>
+
+<h3>
+أبيات وقصائد وشيلات
+</h3>
+
+<div class="quote">
+«الكلمات تبقى .. وأبياتك هي البصمة»
+</div>
 
 </div>
 
@@ -784,9 +678,7 @@ href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20ب�
 </section>
 
 
-<!-- SERVICES -->
-
-<section id="services">
+<section id="services" class="services-section">
 
 <div class="container">
 
@@ -801,7 +693,7 @@ href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20ب�
 </h2>
 
 <p>
-نحوّل فكرتك ومناسبتك إلى كلمات لها أثر
+نكتب لكل مناسبة كلماتها الخاصة
 </p>
 
 </div>
@@ -810,85 +702,73 @@ href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20ب�
 <div class="services">
 
 <article class="card">
-
-<div class="icon">
-✍️
-</div>
-
-<h3>
-قصائد خاصة
-</h3>
-
-<p>
-قصيدة مخصصة لك، باسم الشخص والمناسبة والتفاصيل التي تهمك، وبأسلوب تختاره.
-</p>
-
+<div class="icon">✒️</div>
+<h3>قصائد خاصة بأسماء الأشخاص</h3>
+<p>مخصصة حسب طلبك وبأسلوب مميز وفريد.</p>
 </article>
-
 
 <article class="card">
-
-<div class="icon">
-🎵
-</div>
-
-<h3>
-تجهيز الشيلات
-</h3>
-
-<p>
-ترتيب وصياغة كلمات الشيلة، وضبط الأبيات بما يناسب الأداء والترديد والتسجيل.
-</p>
-
+<div class="icon">🎵</div>
+<h3>تجهيز الشيلات وكلماتها</h3>
+<p>كلمات مرتبة وتناسب الأداء والترديد.</p>
 </article>
-
 
 <article class="card">
+<div class="icon">💍</div>
+<h3>قصائد الزواج والملكات</h3>
+<p>لأجمل اللحظات وبكلمات تليق بالمناسبة.</p>
+</article>
 
-<div class="icon">
-✨
-</div>
+<article class="card">
+<div class="icon">✦</div>
+<h3>قصائد المناسبات والاحتفالات</h3>
+<p>لكل احتفال كلمة تميزه وتخلّده.</p>
+</article>
 
-<h3>
-أبيات للمناسبات
-</h3>
+<article class="card">
+<div class="icon">♡</div>
+<h3>قصائد الاعتذار والغزل والمدح</h3>
+<p>مشاعر صادقة في أبيات راقية.</p>
+</article>
 
-<p>
-أبيات للزواج والتهاني والتكريم والإهداء والمناسبات العائلية والخاصة.
-</p>
-
+<article class="card">
+<div class="icon">✍</div>
+<h3>قصائد وشعر خاص</h3>
+<p>بأسلوب مميز وإبداع فريد يناسب فكرتك.</p>
 </article>
 
 </div>
-
-
-<div class="featured">
-
-<div>
-
-<h3>
-عندك فكرة بسيطة؟
-</h3>
-
-<p>
-حتى لو ما عندك إلا اسم ومناسبة وفكرة… أرسلها لنا ونبني عليها.
-</p>
-
 </div>
-
-<a class="btn whatsapp"
-href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمساعدتكم%20في%20صياغتها">
-أرسل فكرتك الآن
-</a>
-
-</div>
-
-</div>
-
 </section>
 
 
-<!-- ABOUT -->
+<section class="features">
+
+<div class="container feature-grid">
+
+<div class="feature">
+<b>♢</b>
+<span>كلمات تليق بمناسبتك</span>
+</div>
+
+<div class="feature">
+<b>◷</b>
+<span>تنفيذ سريع وجودة عالية</span>
+</div>
+
+<div class="feature">
+<b>♢</b>
+<span>خصوصية تامة</span>
+</div>
+
+<div class="feature">
+<b>♧</b>
+<span>تواصل مباشر وسريع</span>
+</div>
+
+</div>
+</section>
+
 
 <section id="about" class="about">
 
@@ -897,15 +777,13 @@ href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمس�
 <div class="section-head">
 
 <div class="eyebrow">
-من نحن؟
+عن أبياتك
 </div>
 
-<h2>
-عن أبياتك
-</h2>
+<h2>من نحن؟</h2>
 
 <p>
-كلمة خاصة… لمناسبة خاصة
+شعر يجمع بين الأصالة والمعنى
 </p>
 
 </div>
@@ -913,15 +791,16 @@ href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمس�
 
 <div class="about-grid">
 
-<div class="about-box">
+<div class="about-card">
 
 <h2>
 أبياتك، لأن الكلام أحيانًا ما يكفيه كلام عادي.
 </h2>
 
 <p>
-نكتب لك نصًا خاصًا يعكس فكرتك ومشاعرك ومناسبتك.
-هدفنا أن تكون القصيدة أو الأبيات قريبة منك، سهلة في معناها، جميلة في صياغتها، ومختلفة عن الكلام المكرر.
+منصة متخصصة في كتابة القصائد والشعر وتجهيز الشيلات لكل المناسبات.
+نجمع بين الأصالة والمعنى لنقدم لك كلمات تبقى في الذاكرة،
+ونصًا يعكس فكرتك ومشاعرك ومناسبتك.
 </p>
 
 </div>
@@ -930,68 +809,33 @@ href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمس�
 <div class="values">
 
 <div class="value">
-
-<strong>
-🎯 مخصص لك
-</strong>
-
-<span>
-كل طلب يُبنى على تفاصيل مناسبتك والشخص المقصود.
-</span>
-
+<strong>🎯 مخصص لك</strong>
+<span>كل طلب يُبنى على تفاصيل مناسبتك والشخص المقصود.</span>
 </div>
-
 
 <div class="value">
-
-<strong>
-💬 أسلوبك أولًا
-</strong>
-
-<span>
-نبني النص على الأسلوب الذي تحبه: عاطفي، حماسي، نبطي أو رسمي.
-</span>
-
+<strong>💬 أسلوبك أولًا</strong>
+<span>عاطفي، حماسي، نبطي أو رسمي.</span>
 </div>
-
 
 <div class="value">
-
-<strong>
-🎵 مناسب للشيلة
-</strong>
-
-<span>
-نهتم بترتيب الأبيات والقوافي لتكون قابلة للأداء والترديد.
-</span>
-
+<strong>🎵 مناسب للشيلة</strong>
+<span>ترتيب الأبيات والقوافي بما يناسب الأداء والترديد.</span>
 </div>
-
 
 <div class="value">
-
-<strong>
-✨ لمسة خاصة
-</strong>
-
-<span>
-نركز على المعنى والصورة والعبارة التي تعلق في الذاكرة.
-</span>
-
+<strong>✨ لمسة خاصة</strong>
+<span>عبارات تعلق في الذاكرة.</span>
 </div>
 
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- STEPS -->
-
-<section id="steps">
+<section id="steps" class="steps">
 
 <div class="container">
 
@@ -1001,9 +845,7 @@ href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمس�
 بكل بساطة
 </div>
 
-<h2>
-كيف نعمل؟
-</h2>
+<h2>كيف نعمل؟</h2>
 
 <p>
 ثلاث خطوات وتبدأ قصتك
@@ -1012,68 +854,33 @@ href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمس�
 </div>
 
 
-<div class="steps">
+<div class="step-grid">
 
 <div class="step">
-
-<div class="step-number">
-1
+<div class="num">1</div>
+<h3>أرسل فكرتك</h3>
+<p>المناسبة، الأسماء والتفاصيل والأسلوب الذي تفضله.</p>
 </div>
-
-<h3>
-أرسل فكرتك
-</h3>
-
-<p>
-المناسبة، الأسماء، التفاصيل، والأسلوب الذي تفضله.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="step-number">
-2
+<div class="num">2</div>
+<h3>نكتب لك</h3>
+<p>نصيغ الأبيات أو القصيدة ونرتبها بما يناسب طلبك.</p>
 </div>
-
-<h3>
-نكتب لك
-</h3>
-
-<p>
-نصيغ الأبيات أو القصيدة ونرتبها بما يناسب طلبك.
-</p>
-
-</div>
-
 
 <div class="step">
-
-<div class="step-number">
-3
-</div>
-
-<h3>
-تستلمها جاهزة
-</h3>
-
-<p>
-نراجعها معك ونجهزها للاستخدام أو الشيلة والتسجيل.
-</p>
-
+<div class="num">3</div>
+<h3>تستلمها جاهزة</h3>
+<p>نراجعها معك ونجهزها للاستخدام أو الشيلة والتسجيل.</p>
 </div>
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- OCCASIONS -->
-
-<section>
+<section class="occasions">
 
 <div class="container">
 
@@ -1083,24 +890,20 @@ href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمس�
 كل مناسبة لها بيت
 </div>
 
-<h2>
-مناسبات نكتب لها
-</h2>
+<h2>مناسبات نكتب لها</h2>
 
 <p>
-اختر المناسبة أو خلنا نساعدك بصياغة الفكرة
+من الزواج والتخرج إلى المدح والتهاني والشيلات
 </p>
 
 </div>
 
-
-<div class="occasions">
+<div class="pills">
 
 <span class="pill">💍 زواج</span>
 <span class="pill">🎉 تهنئة</span>
 <span class="pill">🏆 تكريم</span>
 <span class="pill">❤️ إهداء</span>
-<span class="pill">👨‍👩‍👧‍👦 مناسبات عائلية</span>
 <span class="pill">🎓 تخرج</span>
 <span class="pill">🎵 شيلات</span>
 <span class="pill">🇸🇦 مناسبات وطنية</span>
@@ -1108,208 +911,8 @@ href="https://wa.me/966533499773?text=عندي%20فكرة%20وأرغب%20بمس�
 </div>
 
 </div>
-
 </section>
 
-
-<!-- PACKAGES -->
-
-<section id="packages">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-خيارات مرنة
-</div>
-
-<h2>
-باقات أبياتك
-</h2>
-
-<p>
-التفاصيل والسعر النهائي يحدد حسب الطلب والمناسبة
-</p>
-
-</div>
-
-
-<div class="pricing">
-
-
-<div class="price">
-
-<h3>
-أبيات
-</h3>
-
-<div class="hint">
-للفكرة السريعة
-</div>
-
-<ul>
-<li>أبيات مخصصة</li>
-<li>حسب المناسبة</li>
-<li>مراجعة وتعديل</li>
-</ul>
-
-<a class="btn secondary"
-href="https://wa.me/966533499773?text=أرغب%20بخدمة%20الأبيات">
-اطلب عبر واتساب
-</a>
-
-</div>
-
-
-<div class="price best">
-
-<div class="best-label">
-الأكثر طلبًا
-</div>
-
-<h3>
-قصيدة خاصة
-</h3>
-
-<div class="hint">
-للمناسبات المميزة
-</div>
-
-<ul>
-<li>قصيدة مخصصة بالكامل</li>
-<li>أسماء وتفاصيل المناسبة</li>
-<li>مراجعة وتعديلات</li>
-</ul>
-
-<a class="btn primary"
-href="https://wa.me/966533499773?text=أرغب%20بقصيدة%20خاصة">
-ابدأ الطلب
-</a>
-
-</div>
-
-
-<div class="price">
-
-<h3>
-شيلة
-</h3>
-
-<div class="hint">
-للتجهيز والأداء
-</div>
-
-<ul>
-<li>صياغة وترتيب الأبيات</li>
-<li>قابلة للترديد والأداء</li>
-<li>تجهيز حسب الأسلوب</li>
-</ul>
-
-<a class="btn secondary"
-href="https://wa.me/966533499773?text=أرغب%20بتجهيز%20شيلة">
-اطلب تجهيز شيلة
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FAQ -->
-
-<section id="faq">
-
-<div class="container">
-
-<div class="section-head">
-
-<div class="eyebrow">
-قبل ما تطلب
-</div>
-
-<h2>
-أسئلة شائعة
-</h2>
-
-<p>
-أهم الأسئلة التي قد تخطر ببالك
-</p>
-
-</div>
-
-
-<div class="faq">
-
-
-<div class="faq-item">
-
-<button class="faq-q">
-هل القصيدة تكون خاصة لي؟
-<span>+</span>
-</button>
-
-<div class="faq-a">
-نعم، نكتبها بناءً على تفاصيلك والمناسبة والأسماء والأفكار التي ترسلها.
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<button class="faq-q">
-هل تجهزون كلمات الشيلات؟
-<span>+</span>
-</button>
-
-<div class="faq-a">
-نعم، نوفر صياغة وترتيب وتجهيز الكلمات بما يناسب الأداء والترديد.
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<button class="faq-q">
-هل أقدر أطلب تعديل؟
-<span>+</span>
-</button>
-
-<div class="faq-a">
-نعم، نراجع النص معك ونضبطه بما يتوافق مع طلبك قبل التسليم النهائي.
-</div>
-
-</div>
-
-
-<div class="faq-item">
-
-<button class="faq-q">
-كيف أعرف السعر؟
-<span>+</span>
-</button>
-
-<div class="faq-a">
-السعر يعتمد على نوع الطلب وطوله وتفاصيله. أرسل لنا طلبك على واتساب ونوضح لك التفاصيل قبل البدء.
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
@@ -1318,7 +921,7 @@ href="https://wa.me/966533499773?text=أرغب%20بتجهيز%20شيلة">
 <div class="contact-box">
 
 <h2>
-عندك مناسبة؟ خلّ الكلام علينا ✨
+أنت تعطينا الفكرة .. ونحن نصيغها لك أبيات ✨
 </h2>
 
 <p>
@@ -1329,21 +932,18 @@ href="https://wa.me/966533499773?text=أرغب%20بتجهيز%20شيلة">
 053 349 9773
 </span>
 
-<a class="btn whatsapp"
-href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بالاستفسار%20عن%20خدمات%20أبياتك">
+<a class="btn gold"
+href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بطلب%20خدمة%20من%20أبياتك">
 💬 ابدأ محادثة واتساب
 </a>
 
 </div>
 
 </div>
-
 </section>
 
 </main>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1352,16 +952,14 @@ href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20ب�
 </div>
 
 <div>
-أبيات وقصائد وشيلات
+لأن لكل شعور أبياته
 </div>
 
 <div class="footer-links">
-
-<a href="#services">الخدمات</a>
-<a href="#packages">الباقات</a>
-<a href="#faq">الأسئلة</a>
-<a href="#contact">تواصل</a>
-
+<a href="#services">خدماتنا</a>
+<a href="#about">من نحن</a>
+<a href="#steps">كيف نعمل</a>
+<a href="#contact">تواصل معنا</a>
 </div>
 
 <small>
@@ -1371,28 +969,11 @@ href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20ب�
 </footer>
 
 
-<!-- WHATSAPP -->
-
 <a class="floating"
 href="https://wa.me/966533499773?text=السلام%20عليكم%20أبياتك"
 aria-label="واتساب">
 💬
 </a>
-
-
-<script>
-
-document.querySelectorAll('.faq-q').forEach(function(btn){
-
-btn.addEventListener('click',function(){
-
-this.parentElement.classList.toggle('open');
-
-});
-
-});
-
-</script>
 
 </body>
 </html>
