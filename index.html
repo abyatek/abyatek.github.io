@@ -1,1 +1,543 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>أبياتك | أبيات وقصائد وشيلات</title>
+
+<meta name="description" content="أبياتك لكتابة القصائد والأبيات الخاصة وتجهيز الشيلات للمناسبات">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.8;
+}
+
+.container{
+    width:92%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* الهيدر */
+
+header{
+    background:white;
+    border-bottom:1px solid #e7ebf2;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.nav{
+    min-height:75px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:#2f6dcc;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.menu{
+    display:flex;
+    gap:25px;
+}
+
+.menu a{
+    color:#263244;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* الرئيسية */
+
+.hero{
+    padding:80px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#ffffff,#edf4ff);
+}
+
+.logo-box{
+    width:90px;
+    height:90px;
+    margin:0 auto 20px;
+    border-radius:25px;
+    background:#2f6dcc;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:48px;
+    font-weight:bold;
+    box-shadow:0 15px 35px rgba(47,109,204,.25);
+}
+
+.hero h1{
+    color:#2f6dcc;
+    font-size:60px;
+    margin-bottom:5px;
+}
+
+.hero h2{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:0 auto 30px;
+    color:#667085;
+    font-size:19px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.secondary{
+    background:white;
+    color:#2f6dcc;
+    border:1px solid #d8e2f2;
+}
+
+/* الأقسام */
+
+section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:35px;
+    margin-bottom:5px;
+}
+
+.section-title p{
+    color:#727c8d;
+}
+
+/* الخدمات */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    border:1px solid #e5eaf1;
+    border-radius:22px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(20,30,50,.05);
+}
+
+.card-icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#697386;
+}
+
+/* عن أبياتك */
+
+.about{
+    background:white;
+}
+
+.about-box{
+    background:#172033;
+    color:white;
+    border-radius:25px;
+    padding:45px 30px;
+    text-align:center;
+}
+
+.about-box h2{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.about-box p{
+    max-width:750px;
+    margin:auto;
+    color:#d9e1ed;
+    font-size:18px;
+}
+
+/* التواصل */
+
+.contact-box{
+    background:linear-gradient(135deg,#edf4ff,#ffffff);
+    border:1px solid #dce7f7;
+    border-radius:25px;
+    padding:45px 25px;
+    text-align:center;
+}
+
+.contact-box h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    color:#667085;
+    margin-bottom:10px;
+}
+
+.phone{
+    display:block;
+    direction:ltr;
+    font-size:22px;
+    font-weight:bold;
+    color:#2f6dcc;
+    margin-bottom:25px;
+}
+
+/* الفوتر */
+
+footer{
+    background:#111827;
+    color:#cbd5e1;
+    text-align:center;
+    padding:35px 15px;
+}
+
+.footer-logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+footer small{
+    display:block;
+    margin-top:10px;
+    color:#8d98aa;
+}
+
+/* زر واتساب العائم */
+
+.floating-whatsapp{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:27px;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    z-index:200;
+}
+
+/* الجوال */
+
+@media(max-width:700px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero{
+        padding:55px 15px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero h2{
+        font-size:23px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 0;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:300px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<a href="#" class="logo">أبياتك</a>
+
+<nav class="menu">
+<a href="#services">الخدمات</a>
+<a href="#about">عن أبياتك</a>
+<a href="#contact">تواصل معنا</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<main>
+
+<!-- الرئيسية -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="logo-box">أ</div>
+
+<h1>أبياتك</h1>
+
+<h2>أبيات وقصائد وشيلات</h2>
+
+<p>
+نكتب لك الكلام اللي بخاطرك...
+قصائد خاصة، أبيات للمناسبات، وتجهيز شيلات بأسلوب يليق بمناسبتك.
+</p>
+
+<div class="buttons">
+
+<a class="btn whatsapp"
+href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بالاستفسار%20عن%20خدمات%20أبياتك">
+💬 تواصل معنا عبر واتساب
+</a>
+
+<a class="btn secondary" href="#services">
+استعرض خدماتنا
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- الخدمات -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>خدمات أبياتك</h2>
+
+<p>نحوّل فكرتك ومناسبتك إلى كلمات تبقى</p>
+
+</div>
+
+
+<div class="services">
+
+
+<div class="card">
+
+<div class="card-icon">✍️</div>
+
+<h3>قصائد خاصة</h3>
+
+<p>
+قصائد مخصصة لك ولمن تحب، تكتب حسب المناسبة والفكرة التي تريدها.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">🎵</div>
+
+<h3>تجهيز الشيلات</h3>
+
+<p>
+تجهيز كلمات الشيلات وترتيب الأبيات بأسلوب مناسب للأداء والتسجيل.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">✨</div>
+
+<h3>أبيات للمناسبات</h3>
+
+<p>
+أبيات للزواج والتهاني والتكريم والمناسبات العائلية والخاصة.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- عن أبياتك -->
+
+<section id="about" class="about">
+
+<div class="container">
+
+<div class="about-box">
+
+<h2>عن أبياتك</h2>
+
+<p>
+أبياتك مساحة للكلمة الجميلة والمعنى الصادق.
+نساعدك في التعبير عن مشاعرك ومناسباتك بكلمات خاصة تُكتب لك،
+بعيدًا عن الكلام المكرر.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- التواصل -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2>عندك فكرة؟ خلها علينا ✨</h2>
+
+<p>
+أرسل لنا تفاصيل المناسبة وما تريده،
+ونتواصل معك ونوضح لك التفاصيل قبل البدء.
+</p>
+
+<span class="phone">
+053 349 9773
+</span>
+
+<a class="btn whatsapp"
+href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بطلب%20خدمة%20من%20أبياتك">
+ابدأ محادثة واتساب
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- الفوتر -->
+
+<footer>
+
+<div class="footer-logo">
+أبياتك
+</div>
+
+<div>
+أبيات وقصائد وشيلات
+</div>
+
+<small>
+© 2026 أبياتك — جميع الحقوق محفوظة
+</small>
+
+</footer>
+
+
+<!-- واتساب -->
+
+<a
+class="floating-whatsapp"
+href="https://wa.me/966533499773?text=السلام%20عليكم%20أبياتك"
+aria-label="واتساب">
+💬
+</a>
+
+</body>
+</html>
