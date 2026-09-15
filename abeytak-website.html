@@ -6,529 +6,677 @@
 
 <title>أبياتك | أبيات وقصائد وشيلات</title>
 
-<meta name="description" content="أبياتك لكتابة القصائد والأبيات الخاصة وتجهيز الشيلات للمناسبات">
+<meta name="description" content="أبياتك — قصائد خاصة، أبيات للمناسبات وتجهيز الشيلات بأسلوب يليق بمناسبتك.">
 
 <style>
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+:root{
+--blue:#2f6dcc;
+--navy:#172033;
+--gold:#b98a3a;
+--bg:#f6f8fc;
+--muted:#667085;
+--line:#e5eaf2;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:Tahoma,Arial,sans-serif;
-  background:#f7f9fd;
-  color:#142033;
-  line-height:1.8;
+font-family:Tahoma,Arial,sans-serif;
+background:var(--bg);
+color:var(--navy);
+line-height:1.8;
 }
 
 a{
-  text-decoration:none;
+text-decoration:none;
 }
 
 .container{
-  width:92%;
-  max-width:1100px;
-  margin:auto;
+width:min(1120px,92%);
+margin:auto;
 }
 
-/* الهيدر */
+/* HEADER */
 
 header{
-  background:white;
-  border-bottom:1px solid #e8edf5;
-  position:sticky;
-  top:0;
-  z-index:100;
+position:sticky;
+top:0;
+z-index:20;
+background:rgba(255,255,255,.96);
+border-bottom:1px solid var(--line);
 }
 
 .nav{
-  min-height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
 .logo{
-  color:#2f6dcc;
-  font-size:30px;
-  font-weight:900;
+font-size:31px;
+font-weight:900;
+color:var(--blue);
 }
 
 .menu{
-  display:flex;
-  gap:30px;
+display:flex;
+gap:28px;
 }
 
 .menu a{
-  color:#263244;
-  font-weight:bold;
+color:var(--navy);
+font-weight:700;
 }
 
-/* الرئيسية */
+/* HERO */
 
 .hero{
-  text-align:center;
-  padding:65px 15px 80px;
-  background:
-    radial-gradient(circle at 50% 0%,#ffffff 0,#f4f7ff 55%,#edf4ff 100%);
+position:relative;
+overflow:hidden;
+padding:78px 15px 86px;
+text-align:center;
+background:linear-gradient(135deg,#ffffff,#edf4ff);
 }
 
-.logo-box{
-  width:100px;
-  height:100px;
-  margin:0 auto 20px;
-  border-radius:30px;
-  background:linear-gradient(145deg,#3c7bd6,#285fb6);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:55px;
-  font-weight:bold;
-  box-shadow:0 18px 40px rgba(47,109,204,.25);
+.hero:before{
+content:"";
+position:absolute;
+width:360px;
+height:360px;
+border-radius:50%;
+background:rgba(47,109,204,.07);
+top:-170px;
+right:-130px;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+width:300px;
+height:300px;
+border-radius:50%;
+background:rgba(185,138,58,.06);
+bottom:-170px;
+left:-120px;
+}
+
+.brand-mark{
+position:relative;
+margin:0 auto 18px;
+width:106px;
+height:106px;
+border-radius:30px;
+background:linear-gradient(145deg,#3979d6,#285eb4);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:58px;
+font-weight:900;
+box-shadow:0 18px 45px rgba(47,109,204,.25);
+}
+
+.brand-mark:after{
+content:"";
+position:absolute;
+inset:7px;
+border:1px solid rgba(255,255,255,.28);
+border-radius:24px;
 }
 
 .hero h1{
-  color:#2f6dcc;
-  font-size:60px;
-  font-weight:900;
-  line-height:1.2;
+position:relative;
+color:var(--blue);
+font-size:clamp(48px,9vw,72px);
+font-weight:900;
+line-height:1.15;
 }
 
 .hero h2{
-  font-size:27px;
-  margin:5px 0 15px;
+position:relative;
+font-size:clamp(22px,4vw,31px);
+margin:7px 0 13px;
 }
 
 .hero p{
-  max-width:720px;
-  margin:auto;
-  color:#667085;
-  font-size:19px;
+position:relative;
+max-width:720px;
+margin:0 auto 28px;
+color:var(--muted);
+font-size:clamp(17px,3vw,20px);
 }
 
 .buttons{
-  margin-top:30px;
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
+position:relative;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:220px;
-  padding:15px 25px;
-  border-radius:16px;
-  font-weight:bold;
-  font-size:17px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:54px;
+padding:13px 25px;
+border-radius:16px;
+font-weight:800;
+transition:.2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
 }
 
 .whatsapp{
-  background:#25d366;
-  color:white;
-  box-shadow:0 10px 25px rgba(37,211,102,.22);
+background:#25d366;
+color:white;
+box-shadow:0 10px 24px rgba(37,211,102,.2);
 }
 
 .secondary{
-  background:white;
-  color:#2f6dcc;
-  border:1px solid #d7e1f0;
+background:white;
+color:var(--blue);
+border:1px solid #d7e2f2;
 }
 
-/* الخدمات */
+/* SECTIONS */
 
 section{
-  padding:70px 0;
+padding:72px 0;
 }
 
-.title{
-  text-align:center;
-  margin-bottom:40px;
+.section-title{
+text-align:center;
+margin-bottom:38px;
 }
 
-.title h2{
-  font-size:36px;
+.section-title h2{
+font-size:clamp(29px,5vw,38px);
+margin-bottom:5px;
 }
 
-.title p{
-  color:#737e90;
-  margin-top:5px;
+.section-title p{
+color:#7a8494;
 }
+
+/* SERVICES */
 
 .services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
 }
 
 .card{
-  background:white;
-  border:1px solid #e5eaf2;
-  border-radius:25px;
-  padding:32px 25px;
-  text-align:center;
-  box-shadow:0 10px 30px rgba(20,30,50,.06);
+background:white;
+border:1px solid var(--line);
+border-radius:24px;
+padding:31px 24px;
+text-align:center;
+box-shadow:0 10px 30px rgba(20,30,50,.045);
+transition:.2s;
+}
+
+.card:hover{
+transform:translateY(-4px);
 }
 
 .icon{
-  width:68px;
-  height:68px;
-  margin:0 auto 15px;
-  border-radius:20px;
-  background:#edf4ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
+width:64px;
+height:64px;
+margin:0 auto 15px;
+border-radius:20px;
+background:#edf4ff;
+color:var(--blue);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
 }
 
 .card h3{
-  font-size:23px;
-  margin-bottom:8px;
+font-size:23px;
+margin-bottom:8px;
 }
 
 .card p{
-  color:#697386;
+color:#697386;
 }
 
-/* عن أبياتك */
+/* ABOUT */
 
 .about{
-  background:white;
+background:white;
 }
 
 .about-box{
-  background:linear-gradient(135deg,#101d33,#1e3353);
-  color:white;
-  border-radius:30px;
-  padding:50px 30px;
-  text-align:center;
+position:relative;
+overflow:hidden;
+background:linear-gradient(145deg,#172033,#24324c);
+color:white;
+border-radius:30px;
+padding:52px 30px;
+text-align:center;
+}
+
+.about-box:after{
+content:"أ";
+position:absolute;
+left:25px;
+bottom:-70px;
+font-size:250px;
+color:rgba(255,255,255,.035);
+font-weight:900;
 }
 
 .about-box h2{
-  font-size:36px;
-  margin-bottom:10px;
+font-size:35px;
+margin-bottom:12px;
 }
 
 .about-box p{
-  max-width:760px;
-  margin:auto;
-  color:#dce4ef;
-  font-size:18px;
+position:relative;
+z-index:1;
+max-width:760px;
+margin:auto;
+color:#dce4f0;
+font-size:18px;
 }
 
-/* التواصل */
+/* STEPS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.step{
+background:white;
+border:1px solid var(--line);
+border-radius:22px;
+padding:25px;
+text-align:center;
+}
+
+.num{
+display:flex;
+width:42px;
+height:42px;
+margin:0 auto 10px;
+border-radius:50%;
+align-items:center;
+justify-content:center;
+background:var(--blue);
+color:white;
+font-weight:900;
+}
+
+/* CONTACT */
 
 .contact-box{
-  text-align:center;
-  background:linear-gradient(135deg,#edf4ff,#ffffff);
-  border:1px solid #dce7f7;
-  border-radius:30px;
-  padding:50px 25px;
+background:linear-gradient(135deg,#eef5ff,#ffffff);
+border:1px solid #dce7f7;
+border-radius:30px;
+padding:48px 25px;
+text-align:center;
 }
 
 .contact-box h2{
-  font-size:34px;
+font-size:clamp(28px,5vw,36px);
+margin-bottom:8px;
 }
 
 .contact-box p{
-  color:#687386;
-  margin:8px 0 20px;
+color:var(--muted);
+max-width:650px;
+margin:0 auto 8px;
 }
 
 .phone{
-  display:block;
-  direction:ltr;
-  color:#2f6dcc;
-  font-size:22px;
-  font-weight:bold;
-  margin-bottom:20px;
+display:block;
+direction:ltr;
+color:var(--blue);
+font-size:22px;
+font-weight:900;
+margin:5px 0 22px;
 }
 
-/* الفوتر */
+/* FOOTER */
 
 footer{
-  background:#0e1727;
-  color:#cbd5e1;
-  text-align:center;
-  padding:35px 15px;
+background:#111827;
+color:#cbd5e1;
+text-align:center;
+padding:34px 15px;
 }
 
 .footer-logo{
-  color:white;
-  font-size:30px;
-  font-weight:bold;
+color:white;
+font-size:29px;
+font-weight:900;
 }
 
 footer small{
-  display:block;
-  color:#8995a8;
-  margin-top:5px;
+display:block;
+margin-top:8px;
+color:#8995a8;
 }
 
-/* زر الواتساب العائم */
+/* WHATSAPP */
 
-.float{
-  position:fixed;
-  left:20px;
-  bottom:20px;
-  width:62px;
-  height:62px;
-  border-radius:50%;
-  background:#25d366;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  box-shadow:0 8px 25px rgba(0,0,0,.2);
-  z-index:200;
+.floating{
+position:fixed;
+left:18px;
+bottom:18px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25d366;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:27px;
+box-shadow:0 10px 28px rgba(0,0,0,.2);
+z-index:30;
 }
 
-/* الجوال */
+/* MOBILE */
 
-@media(max-width:700px){
+@media(max-width:720px){
 
-  .menu{
-    display:none;
-  }
-
-  .nav{
-    min-height:65px;
-  }
-
-  .logo{
-    font-size:27px;
-  }
-
-  .hero{
-    padding:55px 15px 65px;
-  }
-
-  .logo-box{
-    width:90px;
-    height:90px;
-    font-size:48px;
-  }
-
-  .hero h1{
-    font-size:50px;
-  }
-
-  .hero h2{
-    font-size:23px;
-  }
-
-  .hero p{
-    font-size:17px;
-  }
-
-  .buttons{
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .btn{
-    width:100%;
-    max-width:330px;
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  section{
-    padding:55px 0;
-  }
-
-  .title h2{
-    font-size:30px;
-  }
-
-  .about-box,
-  .contact-box{
-    padding:40px 20px;
-  }
+.menu{
+display:none;
 }
+
+.nav{
+min-height:64px;
+}
+
+.hero{
+padding:58px 12px 66px;
+}
+
+.services,
+.steps{
+grid-template-columns:1fr;
+}
+
+section{
+padding:58px 0;
+}
+
+.card{
+padding:27px 22px;
+}
+
+.about-box{
+padding:42px 23px;
+}
+
+.btn{
+width:100%;
+max-width:330px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
-    <a href="#" class="logo">أبياتك</a>
 
-    <nav class="menu">
-      <a href="#services">الخدمات</a>
-      <a href="#about">عن أبياتك</a>
-      <a href="#contact">تواصل معنا</a>
-    </nav>
-  </div>
+<div class="container nav">
+
+<a href="#" class="logo">أبياتك</a>
+
+<nav class="menu">
+
+<a href="#services">الخدمات</a>
+
+<a href="#about">عن أبياتك</a>
+
+<a href="#steps">كيف نعمل</a>
+
+<a href="#contact">تواصل معنا</a>
+
+</nav>
+
+</div>
+
 </header>
 
+<main>
 
 <section class="hero">
 
-  <div class="container">
+<div class="container">
 
-    <div class="logo-box">أ</div>
+<div class="brand-mark">أ</div>
 
-    <h1>أبياتك</h1>
+<h1>أبياتك</h1>
 
-    <h2>أبيات وقصائد وشيلات</h2>
+<h2>أبيات وقصائد وشيلات</h2>
 
-    <p>
-      نكتب لك الكلام اللي بخاطرك...
-      قصائد خاصة، أبيات للمناسبات،
-      وتجهيز شيلات بأسلوب يليق بمناسبتك.
-    </p>
+<p>
+نكتب لك الكلام اللي بخاطرك...
+قصائد خاصة، أبيات للمناسبات،
+وتجهيز شيلات بأسلوب يليق بمناسبتك.
+</p>
 
-    <div class="buttons">
+<div class="buttons">
 
-      <a class="btn whatsapp"
-      href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بالاستفسار%20عن%20خدمات%20أبياتك">
-        💬 تواصل معنا عبر واتساب
-      </a>
+<a class="btn whatsapp"
+href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بالاستفسار%20عن%20خدمات%20أبياتك">
 
-      <a class="btn secondary" href="#services">
-        استعرض خدماتنا
-      </a>
+💬 تواصل معنا عبر واتساب
 
-    </div>
+</a>
 
-  </div>
+<a class="btn secondary" href="#services">
+
+استعرض خدماتنا
+
+</a>
+
+</div>
+
+</div>
 
 </section>
-
 
 <section id="services">
 
-  <div class="container">
+<div class="container">
 
-    <div class="title">
-      <h2>خدمات أبياتك</h2>
-      <p>نحوّل فكرتك ومناسبتك إلى كلمات تبقى</p>
-    </div>
+<div class="section-title">
 
-    <div class="services">
+<h2>خدمات أبياتك</h2>
 
-      <div class="card">
+<p>نحوّل فكرتك ومناسبتك إلى كلمات تبقى</p>
 
-        <div class="icon">✍️</div>
+</div>
 
-        <h3>قصائد خاصة</h3>
+<div class="services">
 
-        <p>
-          قصائد مخصصة لك ولمن تحب،
-          تُكتب حسب المناسبة والفكرة التي تريدها.
-        </p>
+<div class="card">
 
-      </div>
+<div class="icon">✍️</div>
 
+<h3>قصائد خاصة</h3>
 
-      <div class="card">
+<p>
+قصائد مخصصة لك ولمن تحب،
+تُكتب حسب المناسبة والفكرة والأسلوب الذي تريده.
+</p>
 
-        <div class="icon">🎵</div>
+</div>
 
-        <h3>تجهيز الشيلات</h3>
+<div class="card">
 
-        <p>
-          تجهيز كلمات الشيلات وترتيب الأبيات
-          بأسلوب مناسب للأداء والتسجيل.
-        </p>
+<div class="icon">🎵</div>
 
-      </div>
+<h3>تجهيز الشيلات</h3>
 
+<p>
+ترتيب وصياغة كلمات الشيلات
+وتجهيزها بأسلوب مناسب للأداء والتسجيل.
+</p>
 
-      <div class="card">
+</div>
 
-        <div class="icon">✨</div>
+<div class="card">
 
-        <h3>أبيات للمناسبات</h3>
+<div class="icon">✨</div>
 
-        <p>
-          أبيات للزواج والتهاني والتكريم
-          والمناسبات العائلية والخاصة.
-        </p>
+<h3>أبيات للمناسبات</h3>
 
-      </div>
+<p>
+أبيات للزواج والتهاني والتكريم
+والمناسبات العائلية والخاصة.
+</p>
 
-    </div>
+</div>
 
-  </div>
+</div>
+
+</div>
 
 </section>
-
 
 <section id="about" class="about">
 
-  <div class="container">
+<div class="container">
 
-    <div class="about-box">
+<div class="about-box">
 
-      <h2>عن أبياتك</h2>
+<h2>عن أبياتك</h2>
 
-      <p>
-        أبياتك مساحة للكلمة الجميلة والمعنى الصادق.
-        نساعدك في التعبير عن مشاعرك ومناسباتك
-        بكلمات خاصة تُكتب لك، بعيدًا عن الكلام المكرر.
-      </p>
+<p>
+أبياتك مساحة للكلمة الجميلة والمعنى الصادق.
+نساعدك في التعبير عن مشاعرك ومناسباتك
+بكلمات خاصة تُكتب لك، بعيدًا عن الكلام المكرر.
+</p>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </section>
 
+<section id="steps">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>كيف نعمل؟</h2>
+
+<p>بكل بساطة، من فكرتك إلى النص النهائي</p>
+
+</div>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="num">1</div>
+
+<h3>أرسل فكرتك</h3>
+
+<p>وضح لنا المناسبة وما تريده من كلمات.</p>
+
+</div>
+
+<div class="step">
+
+<div class="num">2</div>
+
+<h3>نكتب لك</h3>
+
+<p>نصيغ الأبيات والقصيدة بالأسلوب المناسب لك.</p>
+
+</div>
+
+<div class="step">
+
+<div class="num">3</div>
+
+<h3>تستلم إبداعك</h3>
+
+<p>نراجع معك التفاصيل ونجهز النص بالشكل المطلوب.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 <section id="contact">
 
-  <div class="container">
+<div class="container">
 
-    <div class="contact-box">
+<div class="contact-box">
 
-      <h2>عندك فكرة؟ خلها علينا ✨</h2>
+<h2>عندك فكرة؟ خلّها علينا ✨</h2>
 
-      <p>
-        أرسل لنا تفاصيل المناسبة وما تريده،
-        ونتواصل معك ونوضح لك التفاصيل قبل البدء.
-      </p>
+<p>
+أرسل لنا تفاصيل المناسبة وما تريده،
+ونتواصل معك ونوضح لك التفاصيل قبل البدء.
+</p>
 
-      <span class="phone">053 349 9773</span>
+<span class="phone">053 349 9773</span>
 
-      <a class="btn whatsapp"
-      href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بطلب%20خدمة%20من%20أبياتك">
-        ابدأ محادثة واتساب
-      </a>
+<a class="btn whatsapp"
+href="https://wa.me/966533499773?text=السلام%20عليكم%20أرغب%20بطلب%20خدمة%20من%20أبياتك">
 
-    </div>
+ابدأ محادثة واتساب
 
-  </div>
+</a>
+
+</div>
+
+</div>
 
 </section>
 
+</main>
 
 <footer>
 
-  <div class="footer-logo">أبياتك</div>
+<div class="footer-logo">أبياتك</div>
 
-  <div>أبيات وقصائد وشيلات</div>
+<div>أبيات وقصائد وشيلات</div>
 
-  <small>
-    © 2026 أبياتك — جميع الحقوق محفوظة
-  </small>
+<small>
+© 2026 أبياتك — جميع الحقوق محفوظة
+</small>
 
 </footer>
 
+<a class="floating"
+href="https://wa.me/966533499773?text=السلام%20عليكم%20أبياتك"
+aria-label="واتساب">
 
-<a class="float"
-href="https://wa.me/966533499773?text=السلام%20عليكم%20أبياتك">
-  💬
+💬
+
 </a>
 
 </body>
